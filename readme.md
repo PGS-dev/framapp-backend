@@ -48,9 +48,8 @@ Environments for postman is located in ./docks/postman/environment
 
 ********
 
-==================================================================  
-Read text below if need run app in production  
-==================================================================
+##Read text below if need run app in production  
+
 ## Scripts for running prod
 ```bash
 npm run prod-containers (detatch mode)
