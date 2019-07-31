@@ -1,0 +1,7 @@
+.idea
+.env
+node_modules
+data/db
+yarn.lock
+package-lock.json
+yarn-error.log

@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "target": "es2017",
+    "outDir": "./dist",
+    "baseUrl": "./backend",
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node"
+  },
+  "include": [
+    "backend/**/*.ts",
+    "fixtures/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

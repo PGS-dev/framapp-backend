@@ -1,0 +1,396 @@
+{
+	"info": {
+		"_postman_id": "aa1cdefd-af6d-4d77-ab43-46a2b158838e",
+		"name": "frame-app-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/sign_in",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInVzZXJJZCI6IjVjYWNjYWY3MTFhNGM1MDBhZDRhNzMwMCIsImlhdCI6MTU1NTAwMTQ5MCwiZXhwIjoxNTU1MDA1MDkwfQ.QtwrtgMEdJlDZNClS5ifY4DKorxaSZR705lUMxnKAw0",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"admin\",\n      \"email\": \"admin@admin.com\",\n      \"password\" : \"admin\"\n}"
+				},
+				"url": {
+					"raw": "{{path}}/{{prefix}}/sign_in",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"{{prefix}}",
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInVzZXJJZCI6IjVjYWNjYWY3MTFhNGM1MDBhZDRhNzMwMCIsImlhdCI6MTU1NTAwMTQ5MCwiZXhwIjoxNTU1MDA1MDkwfQ.QtwrtgMEdJlDZNClS5ifY4DKorxaSZR705lUMxnKAw0",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"admin\",\n      \"email\": \"admin@admin.com\",\n      \"password\" : \"admin\"\n}"
+				},
+				"url": {
+					"raw": "{{path}}/{{prefix}}/users",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"{{prefix}}",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInVzZXJJZCI6IjVjYWNjYWY3MTFhNGM1MDBhZDRhNzMwMCIsImlhdCI6MTU1NTAwMTQ5MCwiZXhwIjoxNTU1MDA1MDkwfQ.QtwrtgMEdJlDZNClS5ifY4DKorxaSZR705lUMxnKAw0",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"admin\",\n      \"email\": \"admin@admin.com\",\n      \"password\" : \"admin\"\n}"
+				},
+				"url": {
+					"raw": "{{path}}/{{prefix}}/login",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"{{prefix}}",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/categories",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{path}}/{{prefix}}/categories",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"{{prefix}}",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/categories",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"new category\",\n\t\"description\": \"sample description\"\n}"
+				},
+				"url": {
+					"raw": "{{path}}/{{prefix}}/categories",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"{{prefix}}",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/categories/id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{path}}/{{prefix}}/categories/5cb6e19d976c7600bda09a73",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"{{prefix}}",
+						"categories",
+						"5cb6e19d976c7600bda09a73"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/categories/id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"title\" : \"new titsdle\" }"
+				},
+				"url": {
+					"raw": "{{path}}/{{prefix}}/categories/5cb6e19d976c7600bda09a73",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"{{prefix}}",
+						"categories",
+						"5cb6e19d976c7600bda09a73"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/categories/id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{path}}/{{prefix}}/categories/5cb6ddc45338b200a35a2111",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"{{prefix}}",
+						"categories",
+						"5cb6ddc45338b200a35a2111"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{path}}/{{prefix}}/products",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"{{prefix}}",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/products",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\" : \"sample title 2132s1321321321\",\n \t\"amount\" : 1,\n\t\"description\" : \"sample desc\",\n\t\"price\" : \"23$\",\n\t\"promoted\" : false,\n\t\"categoryId\": \"5cb6e19d976c7600bda09a73\"\n}"
+				},
+				"url": {
+					"raw": "{{path}}/{{prefix}}/products",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"{{prefix}}",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/products/:id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{path}}/{{prefix}}/products/5cb6e33d976c7600bda09a77",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"{{prefix}}",
+						"products",
+						"5cb6e33d976c7600bda09a77"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/products/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"amount\" : 123233221 }"
+				},
+				"url": {
+					"raw": "{{path}}/{{prefix}}/products/5cb6e33d976c7600bda09a77",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"{{prefix}}",
+						"products",
+						"5cb6e33d976c7600bda09a77"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/products/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{path}}/{{prefix}}/products/5cb6e34b976c7600bda09a79",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"{{prefix}}",
+						"products",
+						"5cb6e34b976c7600bda09a79"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
