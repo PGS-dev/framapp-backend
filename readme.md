@@ -42,8 +42,8 @@ other way is register user by "/sign-in"
 ## Postman environment
 Environments for postman is located in ./docks/postman/environment  
 
-- {{path}} should looks like http://0.0.0.0:port = PORT from .env  
-- {{prefix}} default is '/api' can be set by APP_PREFIX   
+- {{path}} should looks like http://0.0.0.0:3000 or PORT from .env  
+- {{prefix}} default is '/api' or your APP_PREFIX   
 - {{authToken}} must be a generated jwt key after login
 
 ********
