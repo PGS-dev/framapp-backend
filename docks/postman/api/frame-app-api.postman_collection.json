@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "/sign_in",
+			"name": "/sign-in",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -22,16 +22,16 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n        \"name\": \"admin\",\n      \"email\": \"admin@admin.com\",\n      \"password\" : \"admin\"\n}"
+					"raw": "{\n        \"name\": \"admin\",\n    \"surname\": \"admin\",\n    \"email\": \"admin@admin.com\",\n      \"password\" : \"admin\"\n}"
 				},
 				"url": {
-					"raw": "{{path}}/{{prefix}}/sign_in",
+					"raw": "{{path}}/{{prefix}}/sign-in",
 					"host": [
 						"{{path}}"
 					],
 					"path": [
 						"{{prefix}}",
-						"sign_in"
+						"sign-in"
 					]
 				}
 			},
