@@ -4,7 +4,7 @@ import * as express from 'express';
 import * as mongoose from 'mongoose';
 import Controller from './common/interfaces/Controller';
 import errorMiddleware from './common/middleware/errorMiddleware';
-import {isProdEnvironment} from "./common/utils/isProdEnv";
+import { isProdEnvironment } from './common/utils/isProdEnv';
 
 class App {
   public app: express.Application;

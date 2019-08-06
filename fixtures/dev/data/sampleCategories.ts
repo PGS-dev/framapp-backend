@@ -1,17 +1,17 @@
 export const sampleCategories = [
   {
     userId: '',
-    description: 'sample product',
-    title: 'this is sample product',
+    description: 'sample category',
+    title: 'this is sample category',
   },
   {
     userId: '',
-    description: 'sample product 2',
-    title: 'this is sample product 2',
+    description: 'sample category 2',
+    title: 'this is sample category 2',
   },
   {
     userId: '',
-    description: 'sample product 3',
-    title: 'this is sample product 3',
+    description: 'sample category 3',
+    title: 'this is sample category 3',
   },
 ];

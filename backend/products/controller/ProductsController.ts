@@ -73,8 +73,15 @@ class ProductsController implements Controller {
       request: express.Request, response: express.Response, next: express.NextFunction) => {
 
     try {
-      const product = await this.productService.updateProductById(request.params.productId, request.body);
-      response.status(CONFIRMED_STATUS_CODES.ACCEPTED).json({ product });
+      const product = await this.productService.getProductById(request.params.productId);
+      const updatedProduct = await this.productService.updateProductById(request.params.productId, request.body);
+      const categoryId = request.body.categoryId;
+      if (request.body.categoryId && (String(product.categoryId) !== String(categoryId))) {
+        await this.categoriesService.removeProductIdFromCategory(product.categoryId, updatedProduct._id);
+        await this.categoriesService.addProductIdToCategory(categoryId, updatedProduct._id);
+      }
+
+      response.status(CONFIRMED_STATUS_CODES.ACCEPTED).json({ product: updatedProduct });
     } catch (err) {
       handleUnexpectedError(err, next);
     }
