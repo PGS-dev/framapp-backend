@@ -29,7 +29,7 @@ class CategoriesController implements Controller {
   }
 
   private initializeRoutes() {
-    this.router.all(`${this.path}/*`, restoreAndVerifyToken);
+    this.router.all(this.path, restoreAndVerifyToken);
     this.router.all(this.path + this.pathParam, restoreAndVerifyToken);
 
     this.router.get(this.path, this.getCategories);
