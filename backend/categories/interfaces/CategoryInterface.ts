@@ -1,5 +1,5 @@
 interface CategoryInterface {
-  userId: string;
+  userId?: string;
   title: string;
   description: string;
   products?: string[];

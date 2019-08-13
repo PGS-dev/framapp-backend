@@ -7,7 +7,7 @@ import {
 import handleUnexpectedError from '../../common/utils/handleUnexpectedError';
 import validationMiddleware from '../../common/middleware/validationMiddleware';
 import PostCategoryDto from '../dto/PostCategoryDto';
-import RequestWithUserId from '../../common/interfaces/RequestWithUserId';
+//import RequestWithUserId from '../../common/interfaces/RequestWithUserId';
 import restoreAndVerifyToken from '../../common/middleware/restoreAndVerifyToken';
 import CategoriesService from '../service/CategoriesService';
 import UserService from '../../user/service/UserService';
@@ -51,22 +51,18 @@ class CategoriesController implements Controller {
   }
 
   private postCategory = async (
-      request: RequestWithUserId, response: express.Response,
+      request: express.Request, response: express.Response,
       next: express.NextFunction) => {
     try {
       const category = {
-        userId: request.userId,
         description: request.body.title,
         title: request.body.description,
       };
       const createdCategory: CategoryInterface = await this.categoriesService.createCategory(
           category);
-      const updatedUser = await this.userService.addCategoryIdToUser(
-          request.userId, createdCategory._id);
 
       response.status(CONFIRMED_STATUS_CODES.ACCEPTED).json({
-        createdCategory,
-        creator: { name: updatedUser.name },
+        createdCategory
       });
     } catch (err) {
       handleUnexpectedError(err, next);
