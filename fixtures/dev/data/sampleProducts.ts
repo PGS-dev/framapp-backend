@@ -6,7 +6,7 @@ export const sampleProducts = [
     price: '23$',
     promoted: false,
     categoryId: '',
-    imageUrl: '',
+    imageUrl: 'https://unsplash.it/320/180/?random&id=0',
   },
   {
     title: 'sample title 2',
@@ -15,7 +15,7 @@ export const sampleProducts = [
     price: '23$',
     promoted: false,
     categoryId: '',
-    imageUrl: '',
+    imageUrl: 'https://unsplash.it/320/180/?random&id=1',
   },
   {
     title: 'sample title 3',
@@ -24,6 +24,6 @@ export const sampleProducts = [
     price: '23$',
     promoted: false,
     categoryId: '',
-    imageUrl: '',
+    imageUrl: 'https://unsplash.it/320/180/?random&id=2',
   },
 ];

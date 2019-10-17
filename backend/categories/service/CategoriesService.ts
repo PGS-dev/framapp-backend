@@ -11,7 +11,7 @@ class CategoriesService {
 
   public getCategoryById = async (categoryId: string) => {
     return this.categoryModel.findById(categoryId).
-        populate({ path: 'products', select: 'title description' }).
+        populate({ path: 'products', select: 'title description imageUrl' }).
         exec();
   }
 
